@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Administrador</title>
+</head>
+<body>
+    <form action="/mi_app/controlador_administrador/" enctype="multipart/form-data" method="POST">
+        {% csrf_token %}
+        <!-- GRUPO -->
+
+        <label>
+            Nombre del grupo:
+            <input type="text" name="grupo_nombre">
+        </label><br/>
+
+        <label>
+            Estado actual:
+            <input type="text" name="grupo_estado" contenteditable="false">
+        </label><br/>
+
+        <label>
+            Descripcion del grupo:
+            <input type="text" name="grupo_descripcion">
+        </label><br/>
+
+        <button type="submit" name="grupo_crear">Crear Grupo</button>
+        <button type="submit" name="grupo_cambiar_estado">Deshabilitar/Habilitar Grupo</button>
+    </form>
+</body>
+</html>
